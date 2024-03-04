@@ -21,9 +21,9 @@ vi vi .eslintrc.js
 npm install
 
 #Install Jest using: 
-npm install --save-dev jest
+#npm install --save-dev jest
 #Install Babel using:
-npm install --save-dev babel-jest @babel/core @babel/preset-env
+#npm install --save-dev babel-jest @babel/core @babel/preset-env
 
 #Install ESLint using: 
-npm install --save-dev eslint
+#npm install --save-dev eslint
