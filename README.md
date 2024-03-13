@@ -112,3 +112,16 @@ module.exports = {
   ]
 };
 ```
+
+
+# Aside — .mjs versus .js
+
+Throughout this article, we've used .js extensions for our module files, but in other resources you may see the .mjs extension used instead. V8's documentation recommends this, for example. The reasons given are:
+
+1. It is good for clarity, i.e. it makes it clear which files are modules, and which are regular JavaScript.
+2. It ensures that your module files are parsed as a module by runtimes such as Node.js, and build tools such as Babel.
+
+It is also worth noting that:
+
+~ Some tools may never support .mjs.
+~ The <script type="module"> attribute is used to denote when a module is being pointed to,
