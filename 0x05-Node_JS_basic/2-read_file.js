@@ -1,5 +1,3 @@
-/** Reading a file synchronously with Node Js */
-
 const { readFileSync, existsSync } = require('fs');
 
 function countStudents(path) {
