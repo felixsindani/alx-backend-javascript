@@ -1,0 +1,176 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   '@babel/cli',
+1 verbose cli   '@babel/core',
+1 verbose cli   '@babel/preset-env' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData @babel/cli
+8 silly fetchPackageMetaData @babel/core
+9 silly fetchPackageMetaData @babel/preset-env
+10 silly fetchNamedPackageData @babel/cli
+11 silly mapToRegistry name @babel/cli
+12 silly mapToRegistry scope (from package name) @babel
+13 verbose mapToRegistry no registry URL found in name for scope @babel
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry uri https://registry.npmjs.org/@babel%2fcli
+17 silly fetchNamedPackageData @babel/core
+18 silly mapToRegistry name @babel/core
+19 silly mapToRegistry scope (from package name) @babel
+20 verbose mapToRegistry no registry URL found in name for scope @babel
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/@babel%2fcore
+24 silly fetchNamedPackageData @babel/preset-env
+25 silly mapToRegistry name @babel/preset-env
+26 silly mapToRegistry scope (from package name) @babel
+27 verbose mapToRegistry no registry URL found in name for scope @babel
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry uri https://registry.npmjs.org/@babel%2fpreset-env
+31 verbose request uri https://registry.npmjs.org/@babel%2fcli
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 1:20:52 PM
+34 verbose request id 98880e23284ddcd2
+35 http request GET https://registry.npmjs.org/@babel%2fcli
+36 verbose request uri https://registry.npmjs.org/@babel%2fcore
+37 verbose request no auth needed
+38 info attempt registry request try #1 at 1:20:52 PM
+39 verbose etag W/"c55d0626133d81dae060c83670ffba7f"
+40 verbose lastModified Mon, 29 Apr 2024 18:34:31 GMT
+41 http request GET https://registry.npmjs.org/@babel%2fcore
+42 verbose request uri https://registry.npmjs.org/@babel%2fpreset-env
+43 verbose request no auth needed
+44 info attempt registry request try #1 at 1:20:52 PM
+45 verbose etag W/"f6937bc43e3a5a9deaac5cbc57338a2a"
+46 verbose lastModified Mon, 29 Apr 2024 18:34:31 GMT
+47 http request GET https://registry.npmjs.org/@babel%2fpreset-env
+48 http 304 https://registry.npmjs.org/@babel%2fpreset-env
+49 verbose headers { date: 'Tue, 30 Apr 2024 20:20:53 GMT',
+49 verbose headers   connection: 'keep-alive',
+49 verbose headers   'cf-ray': '87ca3c272bf50630-IAD',
+49 verbose headers   'cf-cache-status': 'HIT',
+49 verbose headers   age: '171',
+49 verbose headers   'cache-control': 'public, max-age=300',
+49 verbose headers   etag: '"f6937bc43e3a5a9deaac5cbc57338a2a"',
+49 verbose headers   'last-modified': 'Mon, 29 Apr 2024 18:34:31 GMT',
+49 verbose headers   vary: 'Accept-Encoding',
+49 verbose headers   server: 'cloudflare' }
+50 silly get cb [ 304,
+50 silly get   { date: 'Tue, 30 Apr 2024 20:20:53 GMT',
+50 silly get     connection: 'keep-alive',
+50 silly get     'cf-ray': '87ca3c272bf50630-IAD',
+50 silly get     'cf-cache-status': 'HIT',
+50 silly get     age: '171',
+50 silly get     'cache-control': 'public, max-age=300',
+50 silly get     etag: '"f6937bc43e3a5a9deaac5cbc57338a2a"',
+50 silly get     'last-modified': 'Mon, 29 Apr 2024 18:34:31 GMT',
+50 silly get     vary: 'Accept-Encoding',
+50 silly get     server: 'cloudflare' } ]
+51 verbose etag https://registry.npmjs.org/@babel%2fpreset-env from cache
+52 verbose get saving @babel/preset-env to /root/.npm/registry.npmjs.org/_40babel_252fpreset-env/.cache.json
+53 http 304 https://registry.npmjs.org/@babel%2fcore
+54 verbose headers { date: 'Tue, 30 Apr 2024 20:20:53 GMT',
+54 verbose headers   connection: 'keep-alive',
+54 verbose headers   'cf-ray': '87ca3c271ff5206a-IAD',
+54 verbose headers   'cf-cache-status': 'HIT',
+54 verbose headers   age: '275',
+54 verbose headers   'cache-control': 'public, max-age=300',
+54 verbose headers   etag: '"c55d0626133d81dae060c83670ffba7f"',
+54 verbose headers   'last-modified': 'Mon, 29 Apr 2024 18:34:31 GMT',
+54 verbose headers   vary: 'Accept-Encoding',
+54 verbose headers   server: 'cloudflare' }
+55 silly get cb [ 304,
+55 silly get   { date: 'Tue, 30 Apr 2024 20:20:53 GMT',
+55 silly get     connection: 'keep-alive',
+55 silly get     'cf-ray': '87ca3c271ff5206a-IAD',
+55 silly get     'cf-cache-status': 'HIT',
+55 silly get     age: '275',
+55 silly get     'cache-control': 'public, max-age=300',
+55 silly get     etag: '"c55d0626133d81dae060c83670ffba7f"',
+55 silly get     'last-modified': 'Mon, 29 Apr 2024 18:34:31 GMT',
+55 silly get     vary: 'Accept-Encoding',
+55 silly get     server: 'cloudflare' } ]
+56 verbose etag https://registry.npmjs.org/@babel%2fcore from cache
+57 verbose get saving @babel/core to /root/.npm/registry.npmjs.org/_40babel_252fcore/.cache.json
+58 http 200 https://registry.npmjs.org/@babel%2fcli
+59 verbose headers { date: 'Tue, 30 Apr 2024 20:20:52 GMT',
+59 verbose headers   'content-type': 'application/json',
+59 verbose headers   'transfer-encoding': 'chunked',
+59 verbose headers   connection: 'keep-alive',
+59 verbose headers   'cf-ray': '87ca3c2688b282ed-IAD',
+59 verbose headers   'cf-cache-status': 'HIT',
+59 verbose headers   'access-control-allow-origin': '*',
+59 verbose headers   age: '71',
+59 verbose headers   'cache-control': 'public, max-age=300',
+59 verbose headers   etag: 'W/"480074d2465f34ee3e1a8a5c6016c782"',
+59 verbose headers   'last-modified': 'Mon, 29 Apr 2024 18:34:07 GMT',
+59 verbose headers   vary: 'accept-encoding, accept',
+59 verbose headers   server: 'cloudflare',
+59 verbose headers   'content-encoding': 'gzip' }
+60 silly get cb [ 200,
+60 silly get   { date: 'Tue, 30 Apr 2024 20:20:52 GMT',
+60 silly get     'content-type': 'application/json',
+60 silly get     'transfer-encoding': 'chunked',
+60 silly get     connection: 'keep-alive',
+60 silly get     'cf-ray': '87ca3c2688b282ed-IAD',
+60 silly get     'cf-cache-status': 'HIT',
+60 silly get     'access-control-allow-origin': '*',
+60 silly get     age: '71',
+60 silly get     'cache-control': 'public, max-age=300',
+60 silly get     etag: 'W/"480074d2465f34ee3e1a8a5c6016c782"',
+60 silly get     'last-modified': 'Mon, 29 Apr 2024 18:34:07 GMT',
+60 silly get     vary: 'accept-encoding, accept',
+60 silly get     server: 'cloudflare',
+60 silly get     'content-encoding': 'gzip' } ]
+61 verbose get saving @babel/cli to /root/.npm/registry.npmjs.org/_40babel_252fcli/.cache.json
+62 silly install normalizeTree
+63 silly loadCurrentTree Finishing
+64 silly loadIdealTree Starting
+65 silly install loadIdealTree
+66 silly cloneCurrentTree Starting
+67 silly install cloneCurrentTreeToIdealTree
+68 silly cloneCurrentTree Finishing
+69 silly loadShrinkwrap Starting
+70 silly install loadShrinkwrap
+71 silly loadShrinkwrap Finishing
+72 silly loadAllDepsIntoIdealTree Starting
+73 silly install loadAllDepsIntoIdealTree
+74 verbose stack Error: Missing required argument #1
+74 verbose stack     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+74 verbose stack     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+74 verbose stack     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+74 verbose stack     at /usr/share/npm/lib/install/deps.js:190:5
+74 verbose stack     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:35
+74 verbose stack     at Array.forEach (<anonymous>)
+74 verbose stack     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:11
+74 verbose stack     at Array.forEach (<anonymous>)
+74 verbose stack     at asyncMap (/usr/share/npm/node_modules/slide/lib/async-map.js:51:8)
+74 verbose stack     at exports.loadRequestedDeps (/usr/share/npm/lib/install/deps.js:188:3)
+75 verbose cwd /root/alx-backend-javascript/0x05-Node_JS_basic/full_server
+76 error Linux 5.3.0-1032-aws
+77 error argv "/usr/bin/node" "/usr/bin/npm" "install" "--save-dev" "@babel/cli" "@babel/core" "@babel/preset-env"
+78 error node v8.10.0
+79 error npm  v3.5.2
+80 error code EMISSINGARG
+81 error typeerror Error: Missing required argument #1
+81 error typeerror     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+81 error typeerror     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+81 error typeerror     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+81 error typeerror     at /usr/share/npm/lib/install/deps.js:190:5
+81 error typeerror     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:35
+81 error typeerror     at Array.forEach (<anonymous>)
+81 error typeerror     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:11
+81 error typeerror     at Array.forEach (<anonymous>)
+81 error typeerror     at asyncMap (/usr/share/npm/node_modules/slide/lib/async-map.js:51:8)
+81 error typeerror     at exports.loadRequestedDeps (/usr/share/npm/lib/install/deps.js:188:3)
+82 error typeerror This is an error with npm itself. Please report this error at:
+82 error typeerror     <http://github.com/npm/npm/issues>
+83 verbose exit [ 1, true ]
