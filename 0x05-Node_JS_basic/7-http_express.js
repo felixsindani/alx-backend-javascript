@@ -1,78 +1,29 @@
 const express = require('express');
-const { readFile } = require('fs');
-
-const PORT = 1245;
+const students = require('./3-read_file_async');
 const app = express();
+const hostname = '127.0.0.1';
+const port = 1245;
 
-/**
- * function that opens a database, and displays the data
- * @param {String} path - Path to file to open
- * 
- * @returns promise
- */
-function countStudents(path) {
-  return new Promise((resolve, reject) => (
-    readFile(path, 'utf8', (err, data) => {
-      if (err) reject(new Error('Cannot load the database'));
-      if (data) {
-        const result = [];
-        const list = data.toString('utf-8').trim().split('\n');
-        const field = {};
-        const head = list[0].split(',');
-        const arr = [];
-        for (const i in list) {
-          if (i !== '0') {
-            const obj = {};
-            const item = list[i].split(',');
-            for (const j in item) {
-              if (j) {
-                if (j === '3' && Object.hasOwn(field, item[j])) {
-                  field[item[j]] += 1;
-                }
-                if (j === '3' && !Object.hasOwn(field, item[j])) {
-                  field[item[j]] = 1;
-                }
-                obj[head[j]] = item[j];
-              }
-            }
-            arr.push(obj);
-          }
-        }
-        result.push(`\nNumber of students: ${list.length - 1}`);
-        const key = Object.keys(field);
-        for (const i in key) {
-          if (i) {
-            result.push(
-              `Number of students in ${key[i]}: ${field[key[i]]}. List: ${arr
-                .filter((item) => item.field === key[i])
-                .map((item) => item.firstname)
-                .join(', ')}`,
-            );
-          }
-        }
-        resolve(result.join('\n'));
-      }
-    })));
-}
-
-/* Create a more complex HTTP server using Express */
 app.get('/', (req, res) => {
-  res.status(200);
-  res.end('Hello Holberton School!');
-}).get('/students', (req, res) => {
-  res.status(200);
-  countStudents('database.csv')
-    .then((data) => {
-      res.send('This is the list of our students');
-      res.end(data);
-    })
-    .catch((error) => {
-      res.end(error);
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.send('Hello Holberton School!');
+});
+
+app.get('/students', async (req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.write('This is the list of our students\n');
+  await students(process.argv[2]).then((data) => {
+    res.write(`Number of students: ${data.students.length}\n`);
+    res.write(`Number of students in CS: ${data.csStudents.length}. List: ${data.csStudents.join(', ')}\n`);
+    res.write(`Number of students in SWE: ${data.sweStudents.length}. List: ${data.sweStudents.join(', ')}`);
+  }).catch((err) => res.write(err.message))
+    .finally(() => {
+      res.end();
     });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http:127.0.0.1:${PORT}`);
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}`);
 });
-
-module.exports = app;
